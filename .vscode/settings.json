@@ -1,0 +1,22 @@
+{
+    "editor.tabSize": 2,
+
+    "files.associations": {
+        "**/src/**/*.tsx": "typescriptreact",
+        "**/src/**/*.ts": "typescript",
+        "**/src/**/*.js": "javascript",
+        "**/src/**/*.json": "json"
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    }
+}
