@@ -25,7 +25,7 @@ const HorizontalTable = ({ year, prop }: HorizontalTable) => {
 
       <HTRowSe prop={prop} />
       {
-        prop?.ne.map((e, i) => (<HTRowNe key={'htRowNe'+i} ne={e} />))  
+        prop?.ne?.map((e, i) => (<HTRowNe key={'htRowNe'+i} ne={e} />))  
       } 
       
       

@@ -12,7 +12,7 @@ import HorizontalTable from './horizontalTable/HorizontalTable';
 import { setHorizontalTable } from 'feature/horizontalTableSlice';
 
 export default function Home() {
-  const motherDataClass = new DataClass(2024);
+  const motherDataClass = new DataClass(2024, 'B10009');
 
   // 개요 테이블
   const summaryTableDisplay = useAppSelector(

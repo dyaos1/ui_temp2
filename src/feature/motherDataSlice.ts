@@ -4,7 +4,7 @@ import DataClass from '../data/DataClass';
 export const motherDataSlice = createSlice({
   name: 'motherData',
   initialState: {
-    value: new DataClass(2024).motherData,
+    value: new DataClass(2024, 'B100009').motherData,
   },
   reducers: {
     getMotherData: (state) => {

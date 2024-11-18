@@ -89,7 +89,7 @@ export default function Dashboard({ prop }: dashboardProp) {
         </div>
       </div>
 
-      {prop?.brdn_BSNS.map((e, i) => (
+      {prop?.brdn_BSNS?.map((e, i) => (
         <div
           className="text-center items-center border-t-1 border-solid border-black"
           key={`dashboard-${i}`}

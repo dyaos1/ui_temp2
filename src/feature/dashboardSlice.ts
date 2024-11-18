@@ -24,7 +24,7 @@ export const dashboardSlice = createSlice({
       },
     ) => {
       const { idx, initialOrContinous, value } = action.payload;
-      if ((state.value ??= null)) {
+      if ((state.value ??= null) && (state.value.brdn_BSNS ??= null)) {
         if (initialOrContinous === 'initial') {
           state.value.brdn_BSNS[idx].limitIn.initial.sum = Number(value);
           state.value.brdn_BSNS[idx].limitIn.initial.unitCost = state.value
@@ -57,13 +57,13 @@ export const dashboardSlice = createSlice({
       },
     ) => {
       const { idx, initialOrContinous, value } = action.payload;
-      if ((state.value ??= null)) {
+      if ((state.value ??= null) && (state.value.brdn_BSNS ??= null)) {
         if (initialOrContinous === 'initial') {
           state.value.brdn_BSNS[idx].limitIn.initial.unitCost = Number(value);
           state.value.brdn_BSNS[idx].limitIn.initial.sum = state.value
             .brdn_BSNS[idx].limitIn.initial.count
             ? // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-              (state.value.brdn_BSNS[idx].limitIn.initial.count! *
+              (state.value.brdn_BSNS![idx].limitIn.initial.count! *
                 Number(value) *
                 9) /
               12
@@ -90,7 +90,7 @@ export const dashboardSlice = createSlice({
       },
     ) => {
       const { idx, initialOrContinous, value } = action.payload;
-      if ((state.value ??= null)) {
+      if ((state.value ??= null) && (state.value.brdn_BSNS ??= null)) {
         if (initialOrContinous === 'initial') {
           state.value.brdn_BSNS[idx].limitIn.initial.count = Number(value);
           state.value.brdn_BSNS[idx].limitIn.initial.unitCost = state.value
@@ -112,7 +112,7 @@ export const dashboardSlice = createSlice({
       }
     },
     demandChanged: (state, action) => {
-      if ((state.value ??= null)) {
+      if ((state.value ??= null) && (state.value.brdn_BSNS ??= null)) {
         state.value.ptc_BSNS.limitIn.amount = Number(action.payload);
         state.value.brdn_BSNS.map(
           (e) =>

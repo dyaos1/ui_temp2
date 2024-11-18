@@ -15,37 +15,39 @@ interface DashboardDisplay {
       amount: number | null;
     };
   };
-  brdn_BSNS: {
-    name: string;
-    limitIn: {
-      amount: number | null;
-      weight: number | null;
-      initial: {
-        count: number | null;
-        sum: number | null;
-        unitCost: number | null;
-      };
-      continuous: {
-        count: number | null;
-        sum: number | null;
-        unitCost: number | null;
-      };
-    };
-    limitOut: {
-      amount: number | null;
-      weight: number | null;
-      initial: {
-        count: number | null;
-        sum: number | null;
-        unitCost: number | null;
-      };
-      continuous: {
-        count: number | null;
-        sum: number | null;
-        unitCost: number | null;
-      };
-    };
-  }[];
+  brdn_BSNS:
+    | {
+        name: string;
+        limitIn: {
+          amount: number | null;
+          weight: number | null;
+          initial: {
+            count: number | null;
+            sum: number | null;
+            unitCost: number | null;
+          };
+          continuous: {
+            count: number | null;
+            sum: number | null;
+            unitCost: number | null;
+          };
+        };
+        limitOut: {
+          amount: number | null;
+          weight: number | null;
+          initial: {
+            count: number | null;
+            sum: number | null;
+            unitCost: number | null;
+          };
+          continuous: {
+            count: number | null;
+            sum: number | null;
+            unitCost: number | null;
+          };
+        };
+      }[]
+    | null;
 }
 
 interface HTDisplay {
@@ -57,14 +59,16 @@ interface HTDisplay {
       nextYear: number | null;
     };
   };
-  ne: {
-    name: string;
-    budget: {
-      lastYear: YearlyUnitCostI;
-      thisYear: YearlyUnitCostI;
-      nextYear: YearlyUnitCostI;
-    };
-  }[];
+  ne:
+    | {
+        name: string;
+        budget: {
+          lastYear: YearlyUnitCostI;
+          thisYear: YearlyUnitCostI;
+          nextYear: YearlyUnitCostI;
+        };
+      }[]
+    | null;
 }
 
 interface YearlyUnitCostI {
